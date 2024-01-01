@@ -2175,7 +2175,7 @@ video {
   content: "" !important;
 }
 .swiper-button-prev:after {
-  background-image: url(../../../svg/statics/arrowleft.svg) !important;
+  background-image: url(/asset/icon/arrowleft.svg) !important;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -2186,7 +2186,7 @@ video {
   width: 20px;
 }
 .swiper-button-next:after {
-  background-image: url(../../../svg/statics/arrowright.svg) !important;
+  background-image: url(/asset/icon/arrowright.svg) !important;
 }
 .swiper-button-prev {
   background-color: rgba(0, 0, 0, 0.18);
@@ -2273,7 +2273,7 @@ video {
   z-index: 99;
 }
 .bgnew {
-  background-image: url(../../../assets/images/bgnew.svg);
+  background-image: url(/asset/img/bgnew.svg);
   background-repeat: no-repeat;
   background-size: auto;
   height: 330px;

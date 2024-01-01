@@ -1,33 +1,162 @@
+<style>
+  .header-content {
+    z-index: 52;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 51;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+</style>
 <header class="bg-nhattin">
   <div
-    class="container mx-auto flex h-[61px] w-full items-center justify-between py-3 max-md:flex-row-reverse max-md:px-4">
+    class="header-content container mx-auto flex h-[61px] w-full items-center justify-between py-3 max-md:flex-row-reverse max-md:px-4"
+  >
     <div class="flex justify-between">
-      <a class="flex items-center" href="/"><img src="/asset/icon/logont.png"
-          class="mr-1 inline-block object-contain w-[100px]" alt="ZAT express" loading="lazy" /></a>
+      <a class="flex items-center" href="/"
+        ><img
+          src="/asset/icon/logont.png"
+          class="mr-1 inline-block object-contain w-[100px]"
+          alt="ZAT express"
+          loading="lazy"
+      /></a>
     </div>
-    <div class="mb-4 ml-2 flex items-center max-md:hidden md:mb-0 md:self-center">
-      <img src="/asset//icon/iconphonen.svg" alt="Nhất Tín" /><a href="tel:1900 63 6688">
-        <p class="w-[98px] text-center text-base font-medium leading-[25px] text-zinc-600">
+    <div
+      class="mb-4 ml-2 flex items-center max-md:hidden md:mb-0 md:self-center"
+    >
+      <img src="/asset//icon/iconphonen.svg" alt="Nhất Tín" /><a
+        href="tel:1900 63 6688"
+      >
+        <p
+          class="w-[98px] text-center text-base font-medium leading-[25px] text-zinc-600"
+        >
           1900 63 6688
         </p>
       </a>
       <div class="mx-[10px] hidden items-center md:flex">
-        <a href="https://khachhang.ntlogistics.vn/login?url=https://ntlogistics.vn/" aria-label="Đăng nhập"
-          class="inline-flex h-[33px] w-[159px] items-center justify-center gap-2.5 rounded-md border border-zinc-600 px-[13px] py-2">
-          <div class="text-center text-[14px] font-medium leading-[25px] text-zinc-600">
+        <a
+          href="https://khachhang.ntlogistics.vn/login?url=https://ntlogistics.vn/"
+          aria-label="Đăng nhập"
+          class="inline-flex h-[33px] w-[159px] items-center justify-center gap-2.5 rounded-md border border-zinc-600 px-[13px] py-2"
+        >
+          <div
+            class="text-center text-[14px] font-medium leading-[25px] text-zinc-600"
+          >
             Đăng nhập / Đăng ký
           </div>
         </a>
       </div>
       <div class="flex items-center justify-center">
-        <a class="grayscale-0 flex pr-2 text-left text-14 font-medium text-Main_Color_3" href="index.html"><img
-            alt="ZAT express" src="assets/images/vn.svg" /></a><a
-          class="grayscale flex text-left text-14 font-medium text-Main_Color_3" href="en.html"><img class="pr-2"
-            alt="ZAT express" src="assets/images/en.svg" /></a>
+        <a
+          class="grayscale-0 flex pr-2 text-left text-14 font-medium text-Main_Color_3"
+          href="index.html"
+          ><img alt="ZAT express" src="assets/images/vn.svg" /></a
+        ><a
+          class="grayscale flex text-left text-14 font-medium text-Main_Color_3"
+          href="en.html"
+          ><img class="pr-2" alt="ZAT express" src="assets/images/en.svg"
+        /></a>
       </div>
     </div>
     <div class="md:hidden">
-      <img alt="ZAT express" src="svg/statics/threedot.svg" />
+      <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+        >&#9776;</span
+      >
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div>
+        <div
+          data-state="closed"
+          data-orientation="vertical"
+          class="border-b-slate-700 border-0 py-1"
+        >
+          <h3 data-orientation="vertical" data-state="closed" class="flex">
+            <button
+              type="button"
+              aria-controls="radix-:R46b6:"
+              aria-expanded="false"
+              data-state="closed"
+              data-orientation="vertical"
+              id="radix-:R6b6:"
+              class="flex flex-1 items-center justify-between font-medium transition-all hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 py-2"
+              data-radix-collection-item=""
+            >
+              <p class="text-16 font-medium text-Sub_Color_3">
+                <!-- -->Dịch vụ
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4 transition-transform duration-200"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </h3>
+          <div
+            data-state="closed"
+            id="radix-:R46b6:"
+            hidden=""
+            role="region"
+            aria-labelledby="radix-:R6b6:"
+            data-orientation="vertical"
+            class="data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden text-sm transition-all"
+            style="
+              --radix-accordion-content-height: var(
+                --radix-collapsible-content-height
+              );
+              --radix-accordion-content-width: var(
+                --radix-collapsible-content-width
+              );
+            "
+          ></div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>

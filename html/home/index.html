@@ -8,12 +8,15 @@
   <link rel="stylesheet" href="/css/aimation.css" as="style" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/mocassin.css">
+  <link rel="stylesheet" href="/css/mocassin-r.css">
   </link>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <title>ZAT express</title>
 </head>
 
 <body onload="activeTab(1)">
-  <main class="__Home">
+  <main class="__Home bg-bacground">
     <div id="header"></div>
     <div id="navBar"></div>
     <div id="slider"></div>
@@ -22,14 +25,24 @@
     <div id="banner" class="flex justify-center"></div>
     <div id="network" class="flex justify-center"></div>
     <div id="introduce" class="flex justify-center"></div>
+    <div id="newspaper" class="flex justify-center"></div>
+    <div id="custommer" class="flex justify-center"></div>
   </main>
 
   <div id="footer"></div>
+  <div id="fixedfooter" class="flex justify-center"></div>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="../../js/include.js"></script>
+  <script src="../../js/mocassin.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    });
+  </script>
 </body>
 
 </html>

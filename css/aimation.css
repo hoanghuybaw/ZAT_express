@@ -7,15 +7,12 @@ Please feel free to comment and give me some pointers on how to write my code mo
 .kocka {
   display: inline-block;
   margin: 10px;
-  background: #5e7c88;
   transition: all 700ms ease;
   cursor: pointer;
   text-align: center;
   line-height: 80px;
-  font-size: 20px;
   word-wrap: break-word;
   letter-spacing: 3px;
-  color: #fff;
   -webkit-font-smoothing: antialiased
 }
 /* Grow */
