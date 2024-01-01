@@ -1126,6 +1126,9 @@ video {
   --tw-divide-opacity: 1;
   border-color: rgb(253 216 0 / var(--tw-divide-opacity));
 }
+.word-break {
+  word-break: break-all;
+}
 .self-center {
   align-self: center;
 }
@@ -1843,7 +1846,7 @@ video {
 }
 .text-Sub_Color_3 {
   --tw-text-opacity: 1;
-  color: rgb(96 96 96 / var(--tw-text-opacity));
+  color: #606060;
 }
 .text-\[\#2F80ED\] {
   --tw-text-opacity: 1;
