@@ -24,6 +24,8 @@ html {
 body {
   line-height: inherit;
   margin: 0;
+  height: 100vh;
+  background-color: rgb(245 245 247 / var(--tw-bg-opacity));
 }
 hr {
   border-top-width: 1px;

@@ -1,0 +1,355 @@
+<style>
+  .active-p {
+    font-size: 24px;
+  }
+
+  .grid-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  div[role="combobox"] {
+    height: 40px;
+    border-radius: 8px;
+  }
+  .checked {
+    position: relative;
+  }
+  .checked_item {
+    position: absolute;
+    top: -100px;
+  }
+  .checked_item_2 {
+    padding-top: 5rem;
+  }
+  .table-bill {
+    width: 100%;
+    white-space: normal;
+  }
+  .table-bill td {
+    border: none !important;
+    text-align: left;
+    word-break: break-all;
+  }
+  .table-bill tbody th {
+    border: none !important;
+    position: unset;
+    width: 32%;
+    word-break: break-all;
+  }
+  .table-bill thead th {
+    padding: 0.5rem 1rem;
+    position: unset;
+    word-break: break-all;
+  }
+  .table-bill thead th:first-child {
+    width: 32%;
+    position: unset;
+    word-break: break-all;
+  }
+  @media (max-width: 768px) {
+    .checked_item {
+      top: -80px;
+    }
+  }
+</style>
+<div
+  class="functab checked container flex w-full flex-col items-center justify-center max-md:mt-4"
+>
+  <div
+    id="wrapper_1"
+    class="checked_item _loading_overlay_wrapper css-79elbk boxfunc w-full flex flex-col items-center justify-center"
+    data-aos="fade-up"
+    data-aos-duration="1500"
+  >
+    <div
+      class="my-2 grid w-10/12 items-end gap-2 rounded-2xl bg-white p-4 shadow-2xl max-md:w-11/12 max-md:grid-cols-2 md:grid-cols-4"
+    >
+      <p
+        class="w-full text-[20px] font-medium text-black max-md:col-span-2 md:col-span-4"
+      >
+        Nhập thông tin bưu kiện
+      </p>
+      <div class="col-span-1">
+        <p class="py-1 text-18">Nơi gửi</p>
+        <select class="pt-2 select-box" id="selectElement"></select>
+      </div>
+      <div class="col-span-1">
+        <select class="pt-2 select-box" id="selectElement2"></select>
+      </div>
+      <div class="col-span-1">
+        <p class="py-1 text-18">Nơi Nhận</p>
+        <select class="pt-2 select-box" id="selectElement3"></select>
+      </div>
+      <div class="col-span-1">
+        <select class="pt-2 select-box" id="selectElement4"></select>
+      </div>
+      <div class="col-span-1">
+        <p class="py-1 text-18">Số kiện</p>
+        <input
+          class="flex h-10 rounded-md border border-neutral-200 bg-transparent py-2 px-3 placeholder:text-bordercargo disabled:cursor-not-allowed disabled:opacity-50 w-full false"
+          type="text"
+          placeholder="Nhập số kiện"
+          value=""
+        />
+      </div>
+      <div class="col-span-1">
+        <p class="py-1 text-18">Trọng lượng(Kg)</p>
+        <input
+          class="flex h-10 rounded-md border border-neutral-200 bg-transparent py-2 px-3 placeholder:text-bordercargo disabled:cursor-not-allowed disabled:opacity-50 w-full false"
+          type="text"
+          placeholder="Nhập trọng lượng"
+          value=""
+        />
+      </div>
+      <div class="col-span-1">
+        <p class="py-1 text-18">Số tiền thu hộ</p>
+        <input
+          class="flex h-10 rounded-md border border-neutral-200 bg-transparent py-2 px-3 placeholder:text-bordercargo disabled:cursor-not-allowed disabled:opacity-50 w-full false"
+          type="text"
+          placeholder="Nhập số tiền thu hộ"
+          value=""
+        />
+      </div>
+      <button
+        class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-10 py-2 px-4 whitespace-nowrap w-full rounded bg-zinc-600 text-Main_Color_3 shadow"
+        type="submit"
+      >
+        <div
+          class="text-center text-[18px] font-medium leading-normal text-amber-100"
+        >
+          Tra giá
+        </div>
+      </button>
+      <div
+        class="mt-4 h-[0px] w-full border border-dotted border-stone-300 max-md:col-span-2 md:col-span-4"
+      ></div>
+      <p class="py-2 text-[20px] font-medium text-black max-md:col-span-2">
+        Giá cước vận chuyển
+      </p>
+      <div
+        class="col-span-4 mb-2 grid grid-cols-3 gap-x-[32px] gap-y-[20px] max-md:col-span-2 max-md:grid-cols-1"
+      >
+        <div
+          class="relative col-span-1 h-[224px] cursor-pointer rounded-2xl border border-neutral-200 p-4 hover:bg-nhattin"
+        >
+          <p class="text-[24px] font-medium text-slate-900">Tiết kiệm</p>
+          <div class="flex w-full items-center justify-between">
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Giá cước (VNĐ):
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                25.000
+              </p>
+            </div>
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Phí COD (VNĐ):
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                0
+              </p>
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-between">
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Phí ngoại thành xa:
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                0
+              </p>
+            </div>
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Thời gian toàn trình:
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                2 ngày
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-[28px] w-[100px] py-2 px-4 whitespace-nowrap rounded border border-zinc-600 bg-transparent text-14"
+            >
+              <p
+                class="text-center text-[14px] font-medium leading-normal text-zinc-600"
+              >
+                Tạo đơn
+              </p></button
+            ><img
+              src="/asset/icon/tietkiem.svg"
+              width="60"
+              height="60"
+              class="h-[60px] w-[60px] max-md:h-[60px] max-md:w-[60px]"
+              alt="Nhất tín"
+              loading="lazy"
+              style="object-fit: contain"
+            />
+          </div>
+        </div>
+        <div
+          class="relative col-span-1 h-[224px] cursor-pointer rounded-2xl border border-neutral-200 p-4 hover:bg-nhattin"
+        >
+          <p class="text-[24px] font-medium text-slate-900">CPN</p>
+          <div class="flex w-full items-center justify-between">
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Giá cước (VNĐ):
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                20.000
+              </p>
+            </div>
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Phí COD (VNĐ):
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                0
+              </p>
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-between">
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Phí ngoại thành xa:
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                0
+              </p>
+            </div>
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Thời gian toàn trình:
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                1 ngày
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pb-2">
+            <button
+              class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-[28px] w-[100px] py-2 px-4 whitespace-nowrap rounded border border-zinc-600 bg-transparent text-14"
+            >
+              <p
+                class="text-center text-[14px] font-medium leading-normal text-zinc-600"
+              >
+                Tạo đơn
+              </p></button
+            ><img
+              src="/asset/icon/cpn.svg"
+              width="60"
+              height="60"
+              class="h-[60px] w-[60px] max-md:h-[60px] max-md:w-[60px]"
+              alt="Nhất tín"
+              loading="lazy"
+              style="object-fit: contain"
+            />
+          </div>
+        </div>
+        <div
+          class="relative col-span-1 h-[224px] cursor-pointer rounded-2xl border border-neutral-200 p-4 hover:bg-nhattin"
+        >
+          <p class="text-[24px] font-medium text-slate-900">Hoả tốc</p>
+          <div class="flex w-full items-center justify-between">
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Giá cước (VNĐ):
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                37.000
+              </p>
+            </div>
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Phí COD (VNĐ):
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                0
+              </p>
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-between">
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Phí ngoại thành xa:
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                0
+              </p>
+            </div>
+            <div class="flex w-1/2 flex-col justify-start">
+              <p class="text-[12px] font-light leading-normal text-slate-900">
+                Thời gian toàn trình:
+              </p>
+              <p class="text-[16px] font-medium leading-normal text-slate-900">
+                8 giờ
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-[28px] w-[100px] py-2 px-4 whitespace-nowrap rounded border border-zinc-600 bg-transparent text-14"
+            >
+              <p
+                class="text-center text-[14px] font-medium leading-normal text-zinc-600"
+              >
+                Tạo đơn
+              </p></button
+            ><img
+              src="/asset/icon/hoatoc.svg"
+              width="60"
+              height="60"
+              class="h-[60px] w-[60px]"
+              alt="Nhất tín"
+              loading="lazy"
+              style="object-fit: contain"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="checked_item_2" class="w-10/12 max-md:w-11/12 checked_item_2"></div>
+</div>
+
+<script>
+  new SlimSelect({
+    select: "#selectElement",
+    data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+  });
+  new SlimSelect({
+    select: "#selectElement2",
+    data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+  });
+  new SlimSelect({
+    select: "#selectElement3",
+    data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+  });
+  new SlimSelect({
+    select: "#selectElement4",
+    data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+  });
+  new SlimSelect({
+    select: "#selectElement5",
+    data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+  });
+  new SlimSelect({
+    select: "#selectElement6",
+    data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+  });
+  function updateHeight() {
+    const checked_item = document.getElementById("wrapper_1");
+    const checked_item_2 = document.getElementById("checked_item_2");
+    checked_item_2.style.height = checked_item.clientHeight - 90 + "px";
+  }
+  window.addEventListener("load", updateHeight());
+
+  window.addEventListener("resize", () => {
+    updateHeight();
+  });
+</script>

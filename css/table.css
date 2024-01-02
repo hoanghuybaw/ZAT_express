@@ -1,0 +1,88 @@
+table {
+    white-space: nowrap;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    border: 1px solid rgb(253 216 0/var(--tw-bg-opacity));
+}
+
+table td,
+table th {
+    background: rgb(253 216 0/var(--tw-bg-opacity));
+    padding: 0.5rem 1rem;
+}
+
+table thead th {
+    padding: 3px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 10vw;
+    border: 1px solid #fff;
+    align-items: center;
+    vertical-align: middle;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 16px;
+    background: rgb(253 216 0/var(--tw-bg-opacity));
+}
+
+table td {
+    background: #fff;
+    padding: 4px 5px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid rgb(253 216 0/var(--tw-bg-opacity));
+}
+
+table tbody th {
+    font-weight: 100;
+    text-align: left;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid rgb(253 216 0/var(--tw-bg-opacity));
+}
+
+table thead th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+}
+
+table tbody th {
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 1;
+}
+
+caption {
+    text-align: left;
+    padding: 0.25rem;
+    position: sticky;
+    left: 0;
+}
+@media (max-width: 768px) {
+    table thead th {
+        font-size: 14px !important;
+    }
+    table td {
+        font-size: 14px !important;
+    }
+    table tbody th {
+        font-size: 14px !important;
+    }
+}
+
+[role="region"][aria-labelledby][tabindex] {
+    width: 100%;
+    max-height: 98vh;
+    overflow: auto;
+}
+
+[role="region"][aria-labelledby][tabindex]:focus {
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    outline: 0;
+}
